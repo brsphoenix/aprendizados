@@ -1,1 +1,0 @@
-//função que soma dois numeros, retorna o maior valor e diz se pode votar ou não.
