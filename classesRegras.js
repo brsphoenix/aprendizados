@@ -15,7 +15,7 @@ else{ console.log(`Deposito não efetuado.`)}
 
 }
 sacar(valor){
-    if(valor > this.saldo || valor <= 0){
+    if(valor === undefined || typeof valor !== "number" || isNaN(valor) || valor > this.saldo || valor <= 0 ){
         console.log(`Seu saque foi recusado.`)
     }
     else{
@@ -37,5 +37,5 @@ let teste = new contaBancaria(900)
 
 teste.depositar(50)
 teste.verSaldo()
-teste.sacar(10)
+teste.sacar(0)
 teste.verSaldo()
